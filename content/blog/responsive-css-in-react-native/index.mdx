@@ -1,0 +1,53 @@
+---
+title: Responsive CSS in React Native
+date: "2020-04-19"
+description: "Responsive CSS in React Native is one of the biggest pain for developer.
+Tricks I'm using "
+---
+
+Responsive CSS in React Native is one of the biggest pain for developer.
+As such there is no media query support for react-native.
+
+My approach
+
+```JS
+import {Dimensions, PixelRatio} from 'react-native';
+
+const WINDOW_WIDTH = Dimensions.get('window').width;
+const guidelineBaseWidth = 375;
+
+export const scaleSize = (size) => (WINDOW_WIDTH / guidelineBaseWidth) * size;
+
+export const scaleFont = (size) => size * PixelRatio.getFontScale();
+
+```
+
+Here, I'm measuring WINDOW WIDTH of device on which app is running.
+And then as per the above calculation I have delcared two global function.
+scaleSize() and scaleFont() that I'm using with css.
+scaleSize() for all the height and width related properties. And
+scaleFont() for font specific css properties.
+
+```JS
+import styled from 'styled-components/native';
+import {scaleSize} from './mixins';
+
+export const Card = styled.View`
+  width: 100%;
+  border: 1px solid ${(props) => props.theme.cardBorder};
+  border-radius: ${scaleSize(3)}px;
+  background-color: ${(props) => props.theme.cardBackground};
+  padding: ${scaleSize(18)}px ${scaleSize(22)}px ${scaleSize(14)}px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: ${scaleSize(5)}px ${scaleSize(5)}px ${scaleSize(8)}px
+    ${(props) => props.theme.shadowEffect};
+`;
+export const TextView = styled.Text`
+  color: ${(props) => props.theme.subText};
+  font-size: ${scaleFont(15)}px;
+  text-align: justify;
+`;
+
+
+```
