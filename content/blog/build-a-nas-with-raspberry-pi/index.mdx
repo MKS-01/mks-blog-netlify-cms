@@ -5,8 +5,8 @@ description: "Step by step guide to setup your own NAS  using Raspberry Pi"
 ---
 
 Step by step guide to setup your own NAS using Raspberry Pi. I have divided section
-in two parts.First, how to install KALI Linux on Raspberry Pi and enable SSH for remote
-access. Second parts, covers NAS configuration.
+in two parts. First, how to install KALI Linux on Raspberry Pi and enable SSH for remote
+access. Second part, covers NAS configuration.
 
 ![NAS](./nas.jpg)
 
@@ -18,14 +18,14 @@ access. Second parts, covers NAS configuration.
 - [Kali Linux ARM Image](https://www.offensive-security.com/kali-linux-arm-images/#1493408272250-e17e9049-9ce8)
 - External hardisk for storage
 
-### Section 1
+### Section 1 - Kali Linux Installation
 
 #### Installation & First Boot
 
 - Download Kali Linux Image for the Raspberry Pi
   [Kali Linux ARM Image](https://www.offensive-security.com/kali-linux-arm-images/#1493408272250-e17e9049-9ce8)
 
-- Once the image is downloaded. Flash the Image to the Micro SD Card. I used
+- Once the image downloaded. Flash the Image to the Micro SD Card. I used
   [Etcher](https://www.balena.io/etcher/).
 
   ![ISO](./etcher.png)
@@ -74,10 +74,24 @@ sudo service ssh start
 ifconfig
 ```
 
-- That't it. Now we can access Pi remotely.
+- That's it. Try to connect Pi remotely.
 
 ```
-sss root@(IP_address)
+ssh root@(IP_address)
 ```
 
 ![SSH](./ssh.png)
+
+Now, it's ready for all kinds of pentesting attack.
+For wifi related attack one need to attach powerful external
+wifi adapter. Not covering adapter list here.
+
+### Section 2
+
+#### What is NAS?
+
+An NAS device is a storage device connected to a network that allows storage and retrieval
+of data from a central location for authorised network users and varied clients. NAS devices
+are flexible and scale out, meaning that as you need additional storage, you can add to what
+you have. NAS is like having a private cloud in the office. It’s faster, less expensive and
+provides all the benefits of a public cloud on site, giving you complete control.
