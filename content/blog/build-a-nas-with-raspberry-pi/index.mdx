@@ -10,9 +10,9 @@ access. Second parts, covers NAS configuration.
 
 ![NAS](./nas.jpg)
 
-#### Prerequisite (one I'm using)
+#### Prerequisite
 
-- Raspberry Pi 3 B
+- Raspberry Pi 3 B (One I'm using)
 - Class 10 micro SD card 32 GB
 - HDMI monitor, keyboard and mouse (for one time setup)
 - [Kali Linux ARM Image](https://www.offensive-security.com/kali-linux-arm-images/#1493408272250-e17e9049-9ce8)
@@ -20,4 +20,64 @@ access. Second parts, covers NAS configuration.
 
 ### Section 1
 
-![ISO](./etcher.png)
+#### Installation & First Boot
+
+- Download Kali Linux Image for the Raspberry Pi
+  [Kali Linux ARM Image](https://www.offensive-security.com/kali-linux-arm-images/#1493408272250-e17e9049-9ce8)
+
+- Once the image is downloaded. Flash the Image to the Micro SD Card. I used
+  [Etcher](https://www.balena.io/etcher/).
+
+  ![ISO](./etcher.png)
+
+- Time for first boot. At this point we need HDMI monitor and keyboard. Plug in the power source to boot into Kali Linux
+  for the first time. To get to the desktop, default login is "root" with "toor" being the password.
+
+- Update Kali Linux
+
+```
+sudo apt-get update &&  sudo apt-get upgrade
+sudo apt-get dist-upgrade
+```
+
+- Once update completed. Change the root password.
+
+```
+passwd root
+```
+
+#### SSH configuration
+
+- Change default SSH host keys
+
+```
+root@kali:~ rm /etc/ssh/ssh_host_*
+root@kali:~ dpkg-reconfigure openssh-server
+root@kali:~ service ssh restart
+```
+
+- Test SSH working
+
+```
+sudo service ssh status
+```
+
+- If it's not, then
+
+```
+sudo service ssh start
+```
+
+- Run the command ifconfig on Pi terminal and get the IP address from there.
+
+```
+ifconfig
+```
+
+- That't it. Now we can access Pi remotely.
+
+```
+sss root@(IP_address)
+```
+
+![SSH](./ssh.png)
