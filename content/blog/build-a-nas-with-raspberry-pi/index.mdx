@@ -115,13 +115,13 @@ sudo apt-get install samba samba-common-bin
 
 ```
 ls /
-sudo mkdir /server_dir_name
+sudo mkdir /server_name
 ```
 
 - Make folder accessable
 
 ```
-sudo chmod 777 /server_dir_name
+sudo chmod 777 /server_name
 ```
 
 Folder color will change to green.
@@ -132,4 +132,104 @@ Folder color will change to green.
 lsblk
 ```
 
+- Mount the server
+
+```
+sudo mount /dev/sda{number} /server_name
+```
+
+my server name dir - MKS_Server
+
 ![Drive](drive.png)
+
+- Configure Samba
+
+```
+sudo nano /etc/samba/smb.conf
+```
+
+At the bottom add following
+
+```
+[Server Name]
+comment = “anyname”
+path = /server_name
+browseable = yes
+read only = no
+writeable= yes
+create mask = 0777
+directory mask = 0777
+public = no
+force user = root
+```
+
+![Samba_config](samba_config.png)
+
+- Add user to acccess Raspberry PI NAS Server.
+
+```
+sudo adduser user_name
+```
+
+- Set samba password
+
+```
+Sudo smbpasswd – a user_name
+```
+
+- Restart Samba server once above steps done.
+
+```
+sudo /etc/init.d/smbd restart
+sudo /etc/init.d/nmbd restart
+```
+
+- When we restart Raspberry Pi. It will unmount the drive. To auto mount drives upon rebooting
+
+```
+sudo nano /etc/fstab
+```
+
+Add this line
+
+```
+/dev/sda1 /server_name auto defaults, user 0 2
+```
+
+![config_auto_mount](./config_auto_mount.png)
+
+- Set static IP address
+
+```
+sudo nano /etc/dhcpcd.conf
+```
+
+```
+static ip_address = 192.168.0.23/24
+static routers = 192.168.0.1
+static domain_name_users = 192.168.0.1
+```
+
+- Reboot Pi
+
+```
+sudo reboot
+```
+
+
+#### Testing
+
+<div style="display:flex;  flex-direction:row;">
+<div style="height:100%;width:100%">
+
+![ScreenShot1](./server1.png)
+
+ </div>
+<div style="height:100%;width:100%">
+
+![ScreenShot2](./server2.png)
+
+</div>
+</div>
+
+NAS is ready :-)
