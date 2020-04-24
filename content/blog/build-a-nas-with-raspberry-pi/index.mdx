@@ -8,9 +8,9 @@ Step by step guide to setup your own NAS using Raspberry Pi. I have divided sect
 in two parts. First, how to install KALI Linux on Raspberry Pi and enable SSH for remote
 access. Second part, covers NAS configuration.
 
-![NAS](./nas.jpg)
+![NAS](nas.jpg)
 
-#### Prerequisite
+#### Pre-requisites
 
 - Raspberry Pi 3 B (One I'm using)
 - Class 10 micro SD card 32 GB
@@ -28,7 +28,7 @@ access. Second part, covers NAS configuration.
 - Once the image downloaded. Flash the Image to the Micro SD Card. I used
   [Etcher](https://www.balena.io/etcher/).
 
-  ![ISO](./etcher.png)
+  ![ISO](etcher.png)
 
 - Time for first boot. At this point we need HDMI monitor and keyboard. Plug in the power source to boot into Kali Linux
   for the first time. To get to the desktop, default login is "root" with "toor" being the password.
@@ -80,18 +80,56 @@ ifconfig
 ssh root@(IP_address)
 ```
 
-![SSH](./ssh.png)
+![SSH](ssh.png)
 
 Now, it's ready for all kinds of pentesting attack.
 For wifi related attack one need to attach powerful external
 wifi adapter. Not covering adapter list here.
 
-### Section 2
+### Section 2 - NAS configuration
 
-#### What is NAS?
+#### What is NAS ?
 
 An NAS device is a storage device connected to a network that allows storage and retrieval
 of data from a central location for authorised network users and varied clients. NAS devices
 are flexible and scale out, meaning that as you need additional storage, you can add to what
 you have. NAS is like having a private cloud in the office. It’s faster, less expensive and
 provides all the benefits of a public cloud on site, giving you complete control.
+
+#### Steps
+
+- Install following packages to add an support for NTFS and exFAT file systems.
+
+```
+sudo apt-get install ntfs-3g
+sudo apt-get install exfat-utils exfat-fuse
+```
+
+- Install Samba Server
+
+```
+sudo apt-get install samba samba-common-bin
+```
+
+- Create root directory to mount our external storage.
+
+```
+ls /
+sudo mkdir /server_dir_name
+```
+
+- Make folder accessable
+
+```
+sudo chmod 777 /server_dir_name
+```
+
+Folder color will change to green.
+
+- Check mounted drive and there connecting point
+
+```
+lsblk
+```
+
+![Drive](drive.png)
