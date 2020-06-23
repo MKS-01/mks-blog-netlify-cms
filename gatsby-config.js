@@ -11,7 +11,7 @@ module.exports = {
     title: `MKS`,
     author: `MKS`,
     description: `MKS || Full Stack Developer`,
-    siteUrl: `https://mks-technophile.netlify.app/`,
+    siteUrl: `https://mks-technophile.now.sh/`,
     social: {
       twitter: `MKS10_`,
     },
