@@ -17,6 +17,7 @@ class Blog extends React.Component {
 
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
+            console.log("check", node.fields.slug)
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
@@ -27,7 +28,7 @@ class Blog extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`blog${node.fields.slug}`}
+                    to={`/blog${node.fields.slug}`}
                     activeStyle={{ color: "green" }}
                   >
                     {title}
