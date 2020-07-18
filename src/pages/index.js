@@ -77,7 +77,7 @@ class IndexPage extends React.Component {
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/manish-kumar-singh-90491215b">
+                <a href="https://www.linkedin.com/in/mks01">
                   <img
                     style={{
                       margin: 0,
