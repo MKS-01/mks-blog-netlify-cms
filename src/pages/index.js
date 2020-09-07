@@ -43,12 +43,16 @@ class IndexPage extends React.Component {
           <div>
             <h1>Full Stack Developer </h1>
             <h3>Hey, {""}I'm MKS </h3>
+            {/* <p> */}
             <p>
               On week <s>days</s> nights I'm a developer. And on weekends,
               becomes security researcher, or if not, then you can find me
-              playing GOD OF WAR 4 or DEVIL MAY CRY 5. Currently, I'm working
-              with a startup Fanlytiks. Working on their mobile & web analytiks
-              SDKs, mobile apps, web apps.
+              playing GOD OF WAR 4 or DEVIL MAY CRY 5. Love to builds & always
+              open for new challenges. Not, just front & back end. Converting
+              the prototype into the product. Tools and technologies? As such no
+              barriers till now. <br />
+              In the past, I have worked with a startup Fanlytiks. Worked on
+              their mobile & web analytiks SDKs, mobile apps, web apps.
             </p>
           </div>
 
