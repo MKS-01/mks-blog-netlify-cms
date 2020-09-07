@@ -52,7 +52,7 @@ class IndexPage extends React.Component {
               the prototype into the product. Tools and technologies? As such no
               barriers till now. <br />
               In the past, I have worked with a startup Fanlytiks. Worked on
-              their mobile & web analytiks SDKs, mobile apps, web apps.
+              their mobile & web in house analytiks SDKs, mobile apps, web apps.
             </p>
           </div>
 
