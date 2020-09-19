@@ -5,8 +5,8 @@ description: "Responsive CSS in React Native is one of the biggest pain for deve
 Tricks I'm using "
 ---
 
-Responsive CSS in React Native is one of the biggest pain for developer.
-As such there is no media query support for react-native.
+Responsive CSS in React Native is one of the biggest pain for the developer.
+As such, there is no media query support for react-native.
 
 My approach
 
@@ -22,11 +22,10 @@ export const scaleFont = (size) => size * PixelRatio.getFontScale();
 
 ```
 
-Here, I'm measuring WINDOW WIDTH of device on which app is running.
-And then as per the above calculation I have delcared two global function.
-scaleSize() and scaleFont() that I'm using with css.
-scaleSize() for all the height and width related properties. And
-scaleFont() for font specific css properties.
+Here, I'm measuring WINDOW WIDTH of the device on which the app is running.
+And then as per the above calculation, I have declared two global functions.
+scaleSize() and scaleFont() that I'm using with CSS. scaleSize() for all the
+height and width related properties. And scaleFont() for font specific CSS properties.
 
 ```JS
 import styled from 'styled-components/native';
