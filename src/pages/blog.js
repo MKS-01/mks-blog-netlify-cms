@@ -17,7 +17,7 @@ class Blog extends React.Component {
 
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
-            console.log("check", node.fields.slug)
+            // console.log("check", node.fields.slug)
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
