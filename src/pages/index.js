@@ -93,6 +93,21 @@ class IndexPage extends React.Component {
                   />
                 </a>
               </li>
+
+              <li>
+                <a href="https://medium.com/@mks_01">
+                  <img
+                    style={{
+                      margin: 0,
+                      height: 50,
+                      width: 50,
+                      borderRadius: 5,
+                    }}
+                    src="./medium.png"
+                    alt="Medium Icon"
+                  />
+                </a>
+              </li>
             </ul>
           </ProfileList>
         </Container>
