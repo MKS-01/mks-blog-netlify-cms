@@ -161,6 +161,8 @@ const ProfileList = styled.div`
 const BlogContainer = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-top: 24px;
+  margin-bottom: 24px;
 `
 
 const AvtarContainer = styled.div``
