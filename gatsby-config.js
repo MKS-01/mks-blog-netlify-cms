@@ -11,7 +11,7 @@ module.exports = {
     title: `MKS`,
     author: `MKS`,
     description: `MKS || Full Stack Developer`,
-    siteUrl: `https://mks-technophile.now.sh/`,
+    siteUrl: `https://mks-01.now.sh/`,
     social: {
       twitter: `MKS10_`,
     },
