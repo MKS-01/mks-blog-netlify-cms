@@ -68,12 +68,6 @@ module.exports = {
       },
     },
     {
-//       resolve: `gatsby-plugin-google-analytics`,
-//       options: {
-//         trackingId: ``,
-//       },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `MKS`,
