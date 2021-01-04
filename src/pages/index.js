@@ -12,7 +12,7 @@ class IndexPage extends React.Component {
         // title={siteTitle}
       >
         <SEO
-          title="MKS-Technophile"
+          title="MKS"
           keywords={[
             `MKS`,
             `mks`,
@@ -51,8 +51,7 @@ class IndexPage extends React.Component {
               open for new challenges. Not, just front & back end. But, complete
               Life Cycle. Converting the prototype into the product. Tools and
               technologies? As such no barriers till now. <br />
-              In the past, I have worked with a startup Fanlytiks. Worked on
-              their mobile & web in-house analytics SDKs, mobile apps, web apps.
+      
             </p>
           </div>
 
