@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
               On week <s>days</s> nights I'm a developer. And on weekends,
               becomes a security researcher, or if not, then you can find me
               playing GOD OF WAR 4 or DEVIL MAY CRY 5. Love to builds & always
-              open for new challenges. Converting the prototype into the product.
+              open to new challenges. Converting the prototype into the product.
               Tools and technologies? As such no barriers till now. 
               <br />
             </p>
