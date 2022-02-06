@@ -48,7 +48,7 @@ class IndexPage extends React.Component {
             <p>
               On week <s>days</s> nights I'm a developer. And on weekends,
               becomes a security researcher, or if not, then you can find me
-              playing GOD OF WAR 4 or DEVIL MAY CRY 5. Love to builds & always
+              playing GOD OF WAR 4 || DEVIL MAY CRY 5 || Call of Duty: Black Ops Cold War. Love to builds & always
               open to new challenges. Converting the prototype into the product.
               Tools and technologies? As such no barriers till now. 
               <br />
