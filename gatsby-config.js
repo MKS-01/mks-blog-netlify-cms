@@ -76,7 +76,7 @@ module.exports = {
         background_color: `#121212`,
         theme_color: `#121212`,
         display: `minimal-ui`,
-        icon: `content/assets/mks-icon.png`,
+        icon: `content/assets/icon.PNG`,
       },
     },
     {
