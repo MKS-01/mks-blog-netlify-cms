@@ -42,7 +42,7 @@ class IndexPage extends React.Component {
           </AvtarContainer>
 
           <div>
-            <h1>HOBBYIST  DEVELOPER</h1>
+            <h1>DEVELOPER</h1>
             <h3>Hey, {""}I'm MKS </h3>
             {/* <p> */}
             <p>
@@ -53,7 +53,7 @@ class IndexPage extends React.Component {
               Tools and technologies? As such no barriers till now. 
               <br />
             </p>
-<p>Currently, building <a href="https://intellect.co" target="_blank"> intellect (YC 21)</a>.</p>
+
           </div>
 
           <ProfileList>
