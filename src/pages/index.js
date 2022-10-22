@@ -18,9 +18,6 @@ class IndexPage extends React.Component {
             `mks`,
             `mks-blog`,
             `full stack developer`,
-            `manish kumar singh`,
-            `MKS ||  full stack developer`,
-            `MKS Software Developer`,
           ]}
         />
 
